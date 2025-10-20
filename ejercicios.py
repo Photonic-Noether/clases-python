@@ -14,3 +14,8 @@
 
 # 4 - Lazy repeater: https://www.codewars.com/kata/51fc3beb41ecc97ee20000c3
 
+
+
+
+def sumar(n1, n2):
+    return n1 + n2
