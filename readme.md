@@ -1,8 +1,8 @@
-# Clase 4 - Funciones avanzadas
+# Clase 4 - Orientación a objetos, herencia y excepciones
 
 ## ¿En qué rama estás?
 
-Estás en la rama `Clase_4`, que profundiza en las funciones de Python: `*args`, `**kwargs`, type hints, docstrings y funciones como ciudadanos de primera clase (callbacks y funciones de orden superior).
+Estás en la rama `Clase_4`, que introduce la Programación Orientada a Objetos (POO) en Python: clases, instancias, herencia, `super()` y manejo de excepciones.
 
 ## Cómo cambiar de rama
 
@@ -22,22 +22,23 @@ git checkout Clase_3
 
 Los notebooks en la carpeta `/codigo` cubren:
 
-**Funciones (avanzado):**
-- Repaso: `def`, parámetros, `return`
-- Parámetros posicionales vs keyword, valores por defecto
-- Parámetros solo-posicionales (`/`) y solo-keyword (`*`)
-- `*args`: número variable de argumentos posicionales
-- `**kwargs`: número variable de argumentos keyword
-- Desempaquetado de argumentos con `*` y `**` en la llamada
-- Type hints: `param: tipo -> tipo_retorno` y `list[int]`, etc.
-- Docstrings en estilo Google
-- Funciones de orden superior: funciones que reciben o devuelven funciones
-- Regla LEGB y ámbito de variables
-- `global` y `nonlocal`
-- Funciones lambda
+**Orientación a objetos:**
+- Clases y objetos: todo en Python es un objeto
+- Constructor `__init__()` y el parámetro `self`
+- Atributos de instancia y atributos de clase
+- Métodos: funciones que pertenecen a una clase
+- Ejemplo práctico: sistema de combate con clase `Personaje`
+- Herencia: `class Hijo(Padre):` para extender clases
+- El problema del diamante y herencia múltiple
+- `super()` para llamar a métodos de la clase padre
+- Orden de resolución de métodos (MRO): `__mro__`
 
-**Colecciones (repaso):**
-- Slicing, métodos de listas, sets y diccionarios
+**Manejo de errores:**
+- Bloques `try / except / else / finally`
+- Capturar excepciones específicas y genéricas
+- `raise` para lanzar errores manualmente
+- Crear excepciones personalizadas (heredando de `Exception`)
+- Ejemplo: `CuentaBancaria` con excepción `RetiradaIncorrecta`
 
 ## Ejercicios propuestos
 
@@ -45,8 +46,8 @@ En el archivo `ejercicios.py` encontrarás 3 ejercicios propuestos para practica
 
 ## Proyecto propuesto (~30 minutos)
 
-**Constructor de consultas dinámico:**
-Crea una función `construir_query(tabla: str, campos: list[str] = None, **condiciones)` que genere una cadena SQL de tipo `SELECT campo1, campo2 FROM tabla WHERE clave1='valor1' AND clave2=valor2`. Si `campos` es `None`, usa `SELECT *`. Maneja correctamente strings (entre comillas simples) y números. Pruébala con al menos 3 casos distintos.
+**Sistema de gestión de biblioteca:**
+Crea clases `Libro(titulo, autor, isbn, disponible)` y `Biblioteca`. La biblioteca gestiona una lista de libros y permite: prestar (marca como no disponible), devolver, buscar por título o autor, y listar disponibles. Define una excepción `LibroNoDisponible` que se lanza al intentar prestar un libro ya prestado. Incluye un menú de consola.
 
 ---
 
@@ -55,8 +56,8 @@ Crea una función `construir_query(tabla: str, campos: list[str] = None, **condi
 1. **Clase 1** - Variables, tipos de datos y control de flujo
 2. **Clase 2** - Colecciones avanzadas: slicing, métodos y operaciones
 3. **Clase 3** - Funciones: definición, parámetros, ámbito y lambdas
-4. **Clase 4** - Funciones avanzadas: `*args`, `**kwargs` y type hints
-5. **Clase 5** - Funciones completas: funciones de orden superior y closures
-6. **Clase 6** - Orientación a objetos, herencia y excepciones
-7. **Clase 7** - Archivos, módulos y biblioteca estándar de Python
+4. **Clase 4** - Orientación a objetos, herencia y excepciones
+5. **Clase 5** - Módulos, paquetes y entornos virtuales
+6. **Clase 6** - Archivos y context managers
+7. **Clase 7** - Biblioteca estándar de Python
 8. **Clase 8** - Iteradores, generadores, comprensiones e itertools
