@@ -1,8 +1,8 @@
-# Clase 7 - Archivos y biblioteca estándar de Python
+# Clase 7 - Biblioteca estándar de Python
 
 ## ¿En qué rama estás?
 
-Estás en la rama `Clase_7`, que cubre el trabajo con archivos en Python y varios módulos de la biblioteca estándar: `random`, `sys`, `pathlib` y `shutil`. También se repasa la orientación a objetos.
+Estás en la rama `Clase_7`, que hace un recorrido por 10 módulos sencillos y muy útiles de la biblioteca estándar de Python, todos disponibles sin instalar nada.
 
 ## Cómo cambiar de rama
 
@@ -20,24 +20,20 @@ git checkout Clase_6
 
 ## Contenido de esta clase
 
-Los notebooks en la carpeta `/codigo` cubren:
+El notebook en la carpeta `/codigo` cubre los siguientes módulos:
 
-**Archivos (I/O):**
-- La función `open(<archivo>, <modo>)` y sus modos: `r`, `w`, `a`, `x`, `b`, `t`
-- Métodos de archivo: `.close()`, `.read()`, `.readline()`, `.readlines()`, `.write()`, `.writelines()`, `.tell()`, `.seek()`
-- Context managers con `with open(...) as archivo:` (cierre automático)
-
-**Biblioteca estándar:**
-- `random`: `random()`, `uniform()`, `randint()`, `seed()`, `choice()`, `shuffle()`, `sample()`
-- `sys`: `version`, `platform`, `executable`, `argv`, `exit()`, `getsizeof()`, `modules`, `path`
-- `pathlib`: `Path()`, operador `/` para construir rutas, `.resolve()`, `.joinpath()`, `.parent`, `.name`, `.stem`, `.suffix`, `.iterdir()`, `.is_dir()`, `.is_file()`, `.stat()`
-- `shutil`: `copyfile()`, `copy2()`, `copytree()`, `rmtree()`, `move()`, `which()`
-
-**Ejemplo práctico:**
-- Clase `Carta` y `Baraja` usando OOP + `random.shuffle()`
-
-**Orientación a objetos (repaso):**
-- Clases, herencia, `super()` y excepciones personalizadas
+| Módulo | Para qué sirve |
+|--------|----------------|
+| `datetime` | Fechas, horas e intervalos de tiempo |
+| `math` | Funciones matemáticas y constantes (π, e, sqrt, factorial...) |
+| `os` | Sistema operativo, directorios y variables de entorno |
+| `collections` | `Counter`, `defaultdict`, `namedtuple`, `deque` |
+| `time` | Medir tiempo de ejecución, pausas y timestamps |
+| `string` | Constantes de caracteres y templates de texto |
+| `re` | Búsqueda y validación con expresiones regulares |
+| `functools` | `partial`, `reduce` y `lru_cache` |
+| `copy` | Copia superficial (`copy`) y profunda (`deepcopy`) de objetos |
+| `pprint` | Mostrar estructuras de datos complejas de forma legible |
 
 ## Ejercicios propuestos
 
@@ -45,8 +41,12 @@ En el archivo `ejercicios.py` encontrarás 3 ejercicios propuestos para practica
 
 ## Proyecto propuesto (~30 minutos)
 
-**Organizador automático de archivos:**
-Usando `pathlib` y `shutil`, crea un script que recorra un directorio dado por el usuario, clasifique los archivos por extensión en subdirectorios (por ejemplo, `imagenes/`, `documentos/`, `codigo/`, `otros/`) y los mueva allí. Imprime un resumen con cuántos archivos movió a cada categoría y el espacio total procesado.
+**Analizador de texto:**
+Crea un programa que lea un archivo de texto (puedes usar cualquier texto largo) y genere un informe usando varios módulos de esta clase:
+- Con `re`: cuenta palabras, oraciones y párrafos; extrae todos los emails o URLs presentes.
+- Con `collections.Counter`: muestra las 10 palabras más frecuentes (ignorando palabras cortas y puntuación).
+- Con `datetime` y `time`: registra cuándo se analizó y cuánto tardó.
+- Muestra el informe con `pprint` y guárdalo en un archivo `.txt`.
 
 ---
 
@@ -55,8 +55,8 @@ Usando `pathlib` y `shutil`, crea un script que recorra un directorio dado por e
 1. **Clase 1** - Variables, tipos de datos y control de flujo
 2. **Clase 2** - Colecciones avanzadas: slicing, métodos y operaciones
 3. **Clase 3** - Funciones: definición, parámetros, ámbito y lambdas
-4. **Clase 4** - Funciones avanzadas: `*args`, `**kwargs` y type hints
-5. **Clase 5** - Funciones completas: funciones de orden superior y closures
-6. **Clase 6** - Orientación a objetos, herencia y excepciones
-7. **Clase 7** - Archivos, módulos y biblioteca estándar de Python
+4. **Clase 4** - Orientación a objetos, herencia y excepciones
+5. **Clase 5** - Módulos, paquetes y entornos virtuales
+6. **Clase 6** - Archivos y context managers
+7. **Clase 7** - Biblioteca estándar de Python
 8. **Clase 8** - Iteradores, generadores, comprensiones e itertools

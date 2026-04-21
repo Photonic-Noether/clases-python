@@ -1,29 +1,32 @@
 # Ejercicios propuestos - Clase 7
 # Intenta resolverlos sin mirar soluciones externas. Son ligeramente más difíciles que el temario.
 
-# Ejercicio 1: Gestor de logs rotativo
-# Crea una clase GestorLogs con un método registrar(nivel, mensaje) donde nivel
-# puede ser "INFO", "WARNING" o "ERROR". Los mensajes se escriben en un archivo
-# "app.log" con formato "[NIVEL] YYYY-MM-DD HH:MM:SS - mensaje".
-# Cuando el archivo supere 1KB, debe "rotar": renombra el actual añadiendo un
-# sufijo con timestamp (ej: "app_20240101_120000.log") y crea uno nuevo vacío.
-# Usa pathlib para las rutas y el módulo datetime para el timestamp.
+# Ejercicio 1: Agenda de recordatorios con datetime
+# Crea una clase Agenda que almacene recordatorios como una lista de diccionarios
+# {titulo, fecha (datetime), prioridad (1-3)}.
+# Implementa los métodos:
+# - añadir(titulo, fecha_str, prioridad): parsea la fecha con strptime
+# - proximos(dias=7): devuelve los recordatorios en los próximos N días, ordenados por fecha
+# - vencidos(): devuelve los recordatorios cuya fecha ya pasó
+# - resumen(): imprime con pprint un informe agrupado por prioridad
+# Usa collections.defaultdict para agrupar y datetime para comparar fechas.
 
 
-# Ejercicio 2: Explorador de directorios estadístico
-# Crea una función explorar(ruta: str, extensiones: list[str] = None) que use pathlib
-# para recorrer recursivamente un directorio y devuelva un diccionario:
-# {".py": {"archivos": 5, "tamaño_total": 12340}, ".txt": {...}, ...}
-# Si extensiones no es None, filtra solo esas extensiones.
-# Al final imprime el resumen formateado mostrando cada extensión, cantidad de
-# archivos y tamaño total en formato legible (B, KB, MB).
+# Ejercicio 2: Validador y extractor de datos con re
+# Crea un módulo con las siguientes funciones de validación, cada una usando re:
+# - validar_email(s): True si es un email válido (usuario@dominio.extensión)
+# - validar_telefono(s): True si es un teléfono español válido (9 dígitos, puede llevar +34)
+# - validar_fecha(s): True si tiene formato DD/MM/YYYY y la fecha es real
+# - extraer_urls(texto): devuelve lista de URLs (http/https) presentes en el texto
+# - censurar_emails(texto): reemplaza emails por "****@****.***"
+# Prueba cada función con al menos 3 casos válidos y 3 inválidos.
 
 
-# Ejercicio 3: Juego de cartas "Guerra" con registro en archivo
-# Usando las clases Carta y Baraja del notebook, implementa el juego "Guerra":
-# - Reparte todas las cartas entre dos jugadores (listas).
-# - Cada ronda: ambos revelan su primera carta; quien tenga mayor valor se lleva ambas.
-# - En empate: cada jugador pone 1 carta boca abajo y juegan la siguiente.
-# - El juego termina cuando uno se queda sin cartas.
-# Registra cada ronda en un archivo "guerra.log" usando context managers (with).
-# Los valores van de As(1) a Rey(13); usa un diccionario para mapear nombres a números.
+# Ejercicio 3: Benchmark de funciones con functools y time
+# Implementa un decorador benchmark(repeticiones=100) usando functools.wraps que:
+# - Ejecute la función decorada N veces
+# - Mida el tiempo total y medio con time.perf_counter()
+# - Imprima el informe formateado con el nombre de la función, tiempo total y medio
+# Aplícalo a tres funciones distintas que hagan cálculos pesados (ej: fibonacci recursivo,
+# ordenar listas grandes, contar frecuencias de letras en texto largo).
+# Compara los tiempos con y sin lru_cache para la función de fibonacci.
