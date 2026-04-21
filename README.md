@@ -31,10 +31,10 @@ Sustituye `Clase_1` por la rama que quieras. Las ramas disponibles son:
 | `Clase_1` | Variables, tipos de datos y control de flujo |
 | `Clase_2` | Colecciones avanzadas: slicing, métodos y operaciones |
 | `Clase_3` | Funciones: definición, parámetros, ámbito y lambdas |
-| `Clase_4` | Funciones avanzadas: `*args`, `**kwargs` y type hints |
-| `Clase_5` | Funciones completas: funciones de orden superior y closures |
-| `Clase_6` | Orientación a objetos, herencia y excepciones |
-| `Clase_7` | Archivos, módulos y biblioteca estándar de Python |
+| `Clase_4` | Orientación a objetos, herencia y excepciones |
+| `Clase_5` | Módulos, paquetes y entornos virtuales |
+| `Clase_6` | Archivos y context managers |
+| `Clase_7` | Biblioteca estándar de Python |
 | `Clase_8` | Iteradores, generadores, comprensiones e itertools |
 
 Para volver a la rama principal:
@@ -87,20 +87,7 @@ git branch -a
 - Keywords `global` y `nonlocal`
 - Funciones lambda
 
-### Clase 4 — Funciones avanzadas
-- Repaso y consolidación de todos los tipos de parámetros
-- Type hints modernos: `int | float`, `list[int]`, `dict[str, int]`
-- `*args` y `**kwargs` en profundidad
-- Desempaquetado de argumentos con `*` y `**` en la llamada
-- Funciones de orden superior: funciones que reciben y devuelven funciones
-
-### Clase 5 — Funciones completas
-- Lambdas: casos de uso con `sorted()`, `map()`, `filter()`
-- Closures: funciones que recuerdan el estado de su entorno
-- `nonlocal` para modificar variables de funciones envolventes
-- Regla LEGB completa con ejemplos prácticos
-
-### Clase 6 — Orientación a objetos, herencia y excepciones
+### Clase 4 — Orientación a objetos, herencia y excepciones
 - Clases, instancias, `__init__()` y `self`
 - Atributos de instancia y de clase
 - Métodos y ejemplo práctico con sistema de combate
@@ -110,10 +97,15 @@ git branch -a
 - `try / except / else / finally`
 - `raise` para lanzar errores manualmente
 - Excepciones personalizadas (heredando de `Exception`)
-- Módulos, imports, paquetes con `__init__.py`
-- Gestión de paquetes con `pip` y entornos virtuales con `venv`
 
-### Clase 7 — Archivos y biblioteca estándar
+### Clase 5 — Módulos, paquetes y entornos virtuales
+- Módulos: `import`, `from ... import`, alias con `as`
+- Paquetes con `__init__.py` y estructura de directorios
+- Gestión de paquetes con `pip`
+- Entornos virtuales con `venv`: creación, activación y uso
+- Proyecto completo integrando todo lo visto hasta la clase
+
+### Clase 6 — Archivos y context managers
 - `open()` y sus modos: `r`, `w`, `a`, `x`, `b`, `t`
 - Métodos de archivo: `.read()`, `.readline()`, `.write()`, `.seek()`, etc.
 - Context managers: `with open(...) as archivo:`
@@ -121,6 +113,18 @@ git branch -a
 - `sys`: información del intérprete y argumentos del programa
 - `pathlib`: trabajo con rutas de forma multiplataforma
 - `shutil`: copiar, mover y eliminar archivos y directorios
+
+### Clase 7 — Biblioteca estándar de Python
+- `datetime`: fechas, horas, duraciones y operaciones con `timedelta`
+- `math`: constantes y funciones matemáticas
+- `os`: información del sistema y variables de entorno
+- `collections`: `Counter`, `defaultdict`, `OrderedDict`, `namedtuple`, `deque`
+- `time`: medición de tiempo y pausas con `sleep`
+- `string`: constantes de caracteres y `Template`
+- `re`: expresiones regulares — `match`, `search`, `findall`, `sub`
+- `functools`: `reduce`, `partial`, `lru_cache`
+- `copy`: copias superficiales y profundas con `copy` y `deepcopy`
+- `pprint`: impresión legible de estructuras de datos
 
 ### Clase 8 — Iteradores, generadores, comprensiones e itertools
 - Serialización con `pickle` y `json`
@@ -141,9 +145,10 @@ Al completar este curso, serás capaz de:
 - **Escribir código Python idiomático**: usar las estructuras de datos correctas, comprensiones, type hints y docstrings.
 - **Diseñar funciones reutilizables**: con parámetros flexibles (`*args`, `**kwargs`), lambdas y funciones de orden superior.
 - **Modelar problemas con POO**: crear jerarquías de clases con herencia, encapsulación y excepciones propias.
-- **Trabajar con el sistema de archivos**: leer y escribir archivos, serializar datos con JSON/pickle y manejar rutas con `pathlib`.
-- **Procesar datos de forma eficiente**: usando generadores, comprensiones e `itertools` para evitar cargar todo en memoria.
 - **Organizar proyectos Python**: estructura de módulos y paquetes, entornos virtuales y gestión de dependencias.
+- **Trabajar con el sistema de archivos**: leer y escribir archivos, serializar datos con JSON/pickle y manejar rutas con `pathlib`.
+- **Aprovechar la biblioteca estándar**: usar módulos como `datetime`, `collections`, `re`, `functools` y más sin dependencias externas.
+- **Procesar datos de forma eficiente**: usando generadores, comprensiones e `itertools` para evitar cargar todo en memoria.
 
 ---
 
