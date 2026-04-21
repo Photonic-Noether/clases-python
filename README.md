@@ -36,6 +36,7 @@ Sustituye `Clase_1` por la rama que quieras. Las ramas disponibles son:
 | `Clase_6` | Archivos y context managers |
 | `Clase_7` | Biblioteca estándar de Python |
 | `Clase_8` | Iteradores, generadores, comprensiones e itertools |
+| `alumnos` | Espacio de práctica: scripts vacíos y guía de Git |
 
 Para volver a la rama principal:
 
@@ -48,6 +49,23 @@ Para ver todas las ramas disponibles:
 ```bash
 git branch -a
 ```
+
+---
+
+## Rama de prácticas (`alumnos`)
+
+La rama `alumnos` es tu sandbox personal. Contiene archivos vacíos donde puedes escribir código libremente, probar conceptos y practicar Git sin riesgo de romper nada del curso.
+
+```bash
+git checkout alumnos
+```
+
+**Lo que encontrarás:**
+- `practica.py` — archivo de práctica libre con secciones orientativas
+- `mis_notas.py` — para tus propios apuntes en código
+- `readme.md` — guía completa de Git: commits, deshacer cambios, `git pull`, y cómo hacer fork
+
+**Por qué `git push` fallará:** no tienes permisos de escritura en este repositorio. Puedes practicar Git completamente en local (commits, branches, resets) sin necesidad de subir nada. Si quieres practicar push/pull, el `readme.md` de la rama incluye una guía para hacer fork del repositorio en tu propia cuenta de GitHub.
 
 ---
 
