@@ -1,8 +1,8 @@
-# Clase 5 - Funciones completas
+# Clase 5 - Módulos, paquetes y entornos virtuales
 
 ## ¿En qué rama estás?
 
-Estás en la rama `Clase_5`, que cierra el bloque de funciones en Python: repaso completo de `*args`, `**kwargs`, type hints modernos (`int|float`, `list[int]`), funciones de orden superior, closures y expresiones lambda.
+Estás en la rama `Clase_5`, que cubre cómo organizar el código Python en módulos y paquetes, gestionar dependencias con `pip` y crear entornos virtuales con `venv`.
 
 ## Cómo cambiar de rama
 
@@ -22,15 +22,30 @@ git checkout Clase_4
 
 Los notebooks en la carpeta `/codigo` cubren:
 
-**Funciones (bloque completo):**
-- Repaso y consolidación de todos los tipos de parámetros
-- Type hints modernos: `int | float`, `list[int]`, `dict[str, int]`
-- `*args` y `**kwargs` en profundidad
-- Funciones lambda: casos de uso reales con `sorted()`, `map()`, `filter()`
-- Funciones de orden superior: funciones que reciben y devuelven funciones
-- Closures: funciones que recuerdan el estado de su entorno de definición
-- `nonlocal` para modificar variables de funciones envolventes
-- Regla LEGB completa con ejemplos prácticos
+**Módulos:**
+- Qué es un módulo: un archivo `.py` con código reutilizable
+- `import`, `from ... import`, `import ... as`
+- Imports relativos y absolutos
+- Import circular: qué es y cómo evitarlo
+
+**Paquetes:**
+- Qué es un paquete: directorio con `__init__.py`
+- Estructura de un proyecto Python
+- Imports dentro de paquetes
+
+**Gestión de dependencias:**
+- `pip`: `install`, `uninstall`, `upgrade`, `list`, `show`, `freeze`
+- `requirements.txt`: generar e instalar desde él
+
+**Entornos virtuales:**
+- Por qué usar entornos virtuales (aislar dependencias por proyecto)
+- Crear y activar un entorno con `venv`
+- Instalar paquetes en el entorno virtual
+
+**Archivos de configuración:**
+- `.ini` / `.cfg` con `configparser`
+- `.env` con `python-dotenv`
+- `.yaml` y `.toml` (visión general)
 
 ## Ejercicios propuestos
 
@@ -38,8 +53,8 @@ En el archivo `ejercicios.py` encontrarás 3 ejercicios propuestos para practica
 
 ## Proyecto propuesto (~30 minutos)
 
-**Sistema de filtros para una lista de productos:**
-Crea una lista de diccionarios que represente productos `{nombre, precio, categoria, disponible}`. Implementa funciones de filtrado que reciban la lista y criterios como `**kwargs` (por ejemplo, `categoria="electronica"`, `precio_max=100`, `disponible=True`). Combínalas usando una función `aplicar_filtros(productos, *filtros)` que encadene los filtros con lambdas.
+**Gestor de configuración de aplicación:**
+Crea un paquete `config/` con un módulo `settings.py` que lea parámetros de un archivo `.ini` usando `configparser`. El archivo `.ini` debe tener secciones como `[database]`, `[app]`, `[logging]`. El módulo expone una función `get(seccion, clave)` y otra `set(seccion, clave, valor)` que persiste los cambios. Crea un script `main.py` que use el paquete y demuestre la lectura y escritura de configuración.
 
 ---
 
@@ -48,8 +63,8 @@ Crea una lista de diccionarios que represente productos `{nombre, precio, catego
 1. **Clase 1** - Variables, tipos de datos y control de flujo
 2. **Clase 2** - Colecciones avanzadas: slicing, métodos y operaciones
 3. **Clase 3** - Funciones: definición, parámetros, ámbito y lambdas
-4. **Clase 4** - Funciones avanzadas: `*args`, `**kwargs` y type hints
-5. **Clase 5** - Funciones completas: funciones de orden superior y closures
-6. **Clase 6** - Orientación a objetos, herencia y excepciones
-7. **Clase 7** - Archivos, módulos y biblioteca estándar de Python
+4. **Clase 4** - Orientación a objetos, herencia y excepciones
+5. **Clase 5** - Módulos, paquetes y entornos virtuales
+6. **Clase 6** - Archivos y context managers
+7. **Clase 7** - Biblioteca estándar de Python
 8. **Clase 8** - Iteradores, generadores, comprensiones e itertools
