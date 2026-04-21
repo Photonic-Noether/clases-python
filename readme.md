@@ -1,8 +1,8 @@
-# Clase 6 - Orientación a objetos, excepciones y módulos
+# Clase 6 - Archivos y context managers
 
 ## ¿En qué rama estás?
 
-Estás en la rama `Clase_6`, que introduce la Programación Orientada a Objetos (POO) en Python: clases, instancias, herencia, `super()`, manejo de excepciones y organización del código en módulos y paquetes.
+Estás en la rama `Clase_6`, que cubre el trabajo con archivos en Python: lectura, escritura, context managers y algunos módulos útiles de la biblioteca estándar relacionados con el sistema de archivos.
 
 ## Cómo cambiar de rama
 
@@ -22,33 +22,19 @@ git checkout Clase_5
 
 Los notebooks en la carpeta `/codigo` cubren:
 
-**Orientación a objetos:**
-- Clases y objetos: todo en Python es un objeto
-- Constructor `__init__()` y el parámetro `self`
-- Atributos de instancia y atributos de clase
-- Métodos: funciones que pertenecen a una clase
-- Ejemplo práctico: sistema de combate con clase `Personaje`
-- Herencia: `class Hijo(Padre):` para extender clases
-- El problema del diamante y herencia múltiple
-- `super()` para llamar a métodos de la clase padre
-- Orden de resolución de métodos (MRO): `__mro__`
+**Archivos (I/O):**
+- La función `open(<archivo>, <modo>)` y sus modos: `r`, `w`, `a`, `x`, `b`, `t`
+- Métodos de archivo: `.close()`, `.read()`, `.readline()`, `.readlines()`, `.write()`, `.writelines()`, `.tell()`, `.seek()`
+- Context managers con `with open(...) as archivo:` (cierre automático)
 
-**Manejo de errores:**
-- Bloques `try / except / else / finally`
-- Capturar excepciones específicas y genéricas
-- `raise` para lanzar errores manualmente
-- Crear excepciones personalizadas (heredando de `Exception`)
-- Ejemplo: `CuentaBancaria` con excepción `RetiradaIncorrecta`
+**Módulos de sistema de archivos:**
+- `pathlib`: `Path()`, operador `/` para construir rutas, `.resolve()`, `.parent`, `.name`, `.stem`, `.suffix`, `.iterdir()`, `.is_dir()`, `.is_file()`, `.stat()`
+- `shutil`: `copyfile()`, `copy2()`, `copytree()`, `rmtree()`, `move()`, `which()`
+- `sys`: información del intérprete, `argv`, `path`, `exit()`
+- `random`: generación de números y selecciones aleatorias
 
-**Módulos y paquetes:**
-- Módulos: archivos `.py` con código reutilizable
-- `import`, `from ... import`, `import ... as`
-- Imports relativos y absolutos
-- Import circular: qué es y cómo evitarlo
-- Paquetes: directorios con `__init__.py`
-- Gestión de paquetes con `pip`
-- Entornos virtuales con `venv`
-- Archivos de configuración: `.ini`, `.env`, `.yaml`, `.toml`
+**Ejemplo práctico:**
+- Clase `Carta` y `Baraja` usando OOP + `random.shuffle()`
 
 ## Ejercicios propuestos
 
@@ -56,8 +42,8 @@ En el archivo `ejercicios.py` encontrarás 3 ejercicios propuestos para practica
 
 ## Proyecto propuesto (~30 minutos)
 
-**Sistema de gestión de biblioteca:**
-Crea clases `Libro(titulo, autor, isbn, disponible)` y `Biblioteca`. La biblioteca gestiona una lista de libros y permite: prestar (marca como no disponible), devolver, buscar por título o autor, y listar disponibles. Define una excepción `LibroNoDisponible` que se lanza al intentar prestar un libro ya prestado. Incluye un menú de consola.
+**Organizador automático de archivos:**
+Usando `pathlib` y `shutil`, crea un script que recorra un directorio dado por el usuario, clasifique los archivos por extensión en subdirectorios (por ejemplo, `imagenes/`, `documentos/`, `codigo/`, `otros/`) y los mueva allí. Imprime un resumen con cuántos archivos movió a cada categoría y el espacio total procesado.
 
 ---
 
@@ -66,8 +52,8 @@ Crea clases `Libro(titulo, autor, isbn, disponible)` y `Biblioteca`. La bibliote
 1. **Clase 1** - Variables, tipos de datos y control de flujo
 2. **Clase 2** - Colecciones avanzadas: slicing, métodos y operaciones
 3. **Clase 3** - Funciones: definición, parámetros, ámbito y lambdas
-4. **Clase 4** - Funciones avanzadas: `*args`, `**kwargs` y type hints
-5. **Clase 5** - Funciones completas: funciones de orden superior y closures
-6. **Clase 6** - Orientación a objetos, herencia y excepciones
-7. **Clase 7** - Archivos, módulos y biblioteca estándar de Python
+4. **Clase 4** - Orientación a objetos, herencia y excepciones
+5. **Clase 5** - Módulos, paquetes y entornos virtuales
+6. **Clase 6** - Archivos y context managers
+7. **Clase 7** - Biblioteca estándar de Python
 8. **Clase 8** - Iteradores, generadores, comprensiones e itertools

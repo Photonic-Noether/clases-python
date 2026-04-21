@@ -1,27 +1,28 @@
 # Ejercicios propuestos - Clase 6
 # Intenta resolverlos sin mirar soluciones externas. Son ligeramente más difíciles que el temario.
 
-# Ejercicio 1: Jerarquía de empleados con herencia múltiple
-# Crea una clase base Empleado(nombre, salario) con un método calcular_bonus()
-# que devuelva el 10% del salario. Hereda dos clases:
-# - Programador(lenguajes: list): el bonus es un 20% del salario.
-# - Manager(equipo: list[Empleado]): el bonus es un 30% del salario + 5% por miembro del equipo.
-# Implementa __str__ en la clase base mostrando nombre, salario y bonus calculado.
-# Usa super() correctamente en todos los constructores.
+# Ejercicio 1: Gestor de logs rotativo
+# Crea una clase GestorLogs con un método registrar(nivel, mensaje) donde nivel
+# puede ser "INFO", "WARNING" o "ERROR". Los mensajes se escriben en un archivo
+# "app.log" con formato "[NIVEL] YYYY-MM-DD HH:MM:SS - mensaje".
+# Cuando el archivo supere 1KB, debe "rotar": renombra el actual añadiendo un
+# sufijo con timestamp (ej: "app_20240101_120000.log") y crea uno nuevo vacío.
+# Usa pathlib para las rutas y el módulo datetime para el timestamp.
 
 
-# Ejercicio 2: Contexto de base de datos simulada (context manager)
-# Implementa una clase ConexionDB con __enter__ y __exit__ que simule una conexión.
-# Al entrar: imprime "Conectando a la base de datos..."
-# Al salir sin error: imprime "Commit realizado. Conexión cerrada."
-# Al salir con error: imprime "Rollback realizado: [mensaje_error]. Conexión cerrada."
-# El __exit__ debe suprimir el error (devolver True) para que el programa no se detenga.
-# Pruébala con un bloque with normal y otro que lance una excepción.
+# Ejercicio 2: Explorador de directorios estadístico
+# Crea una función explorar(ruta: str, extensiones: list[str] = None) que use pathlib
+# para recorrer recursivamente un directorio y devuelva un diccionario:
+# {".py": {"archivos": 5, "tamaño_total": 12340}, ".txt": {...}, ...}
+# Si extensiones no es None, filtra solo esas extensiones.
+# Imprime el resumen formateado mostrando extensión, cantidad y tamaño (B, KB o MB).
 
 
-# Ejercicio 3: Sistema de excepciones para una cuenta bancaria
-# Crea la clase CuentaBancaria con saldo, limite_credito y lista de transacciones.
-# Define excepciones personalizadas: SaldoInsuficiente, MontoInvalido (monto <= 0).
-# Implementa: depositar(monto), retirar(monto) y transferir(destino, monto).
-# Cada operación añade un registro a la lista de transacciones con el tipo y monto.
-# Si retirar pone el saldo por debajo de -limite_credito, lanza SaldoInsuficiente.
+# Ejercicio 3: Juego de cartas "Guerra" con registro en archivo
+# Usando las clases Carta y Baraja del notebook, implementa el juego "Guerra":
+# - Reparte todas las cartas entre dos jugadores (listas).
+# - Cada ronda: ambos revelan su primera carta; quien tenga mayor valor se lleva ambas.
+# - En empate: cada jugador pone 1 carta boca abajo y juegan la siguiente.
+# - El juego termina cuando uno se queda sin cartas.
+# Registra cada ronda en un archivo "guerra.log" usando context managers (with).
+# Los valores van de As(1) a Rey(13); usa un diccionario para mapear nombres a números.
