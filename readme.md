@@ -2,7 +2,7 @@
 
 ## ¿En qué rama estás?
 
-Estás en la rama `Clase_2`, que profundiza en las colecciones de Python: slicing, métodos avanzados, unpacking, sets y diccionarios. También se repasa el control de flujo de la clase anterior.
+Estás en la rama `Clase_2`, que profundiza en las colecciones de Python: slicing, métodos avanzados, unpacking, sets y diccionarios.
 
 ## Cómo cambiar de rama
 
@@ -33,10 +33,6 @@ Los notebooks en la carpeta `/codigo` cubren:
 - Métodos de diccionarios: `.get()`, `.setdefault()`, `.keys()`, `.values()`, `.items()`, `.fromkeys()`
 - Fusión de diccionarios con el operador `|`
 
-**Control de flujo (repaso):**
-- Bucles `while` y `for`
-- Condicionales `if/elif/else` y operador ternario
-
 ## Ejercicios propuestos
 
 En el archivo `ejercicios.py` encontrarás 3 ejercicios propuestos para practicar. Son de dificultad ligeramente superior al temario y no tienen solución: ¡intenta resolverlos tú!
@@ -53,8 +49,8 @@ Crea una agenda que almacene contactos en un diccionario `{nombre: {telefono, em
 1. **Clase 1** - Variables, tipos de datos y control de flujo
 2. **Clase 2** - Colecciones avanzadas: slicing, métodos y operaciones
 3. **Clase 3** - Funciones: definición, parámetros, ámbito y lambdas
-4. **Clase 4** - Funciones avanzadas: `*args`, `**kwargs` y type hints
-5. **Clase 5** - Funciones completas: funciones de orden superior y closures
-6. **Clase 6** - Orientación a objetos, herencia y excepciones
-7. **Clase 7** - Archivos, módulos y biblioteca estándar de Python
+4. **Clase 4** - Orientación a objetos, herencia y excepciones
+5. **Clase 5** - Módulos, paquetes y entornos virtuales
+6. **Clase 6** - Archivos y context managers
+7. **Clase 7** - Biblioteca estándar de Python
 8. **Clase 8** - Iteradores, generadores, comprensiones e itertools
