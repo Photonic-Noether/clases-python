@@ -50,6 +50,34 @@ Para ver todas las ramas disponibles:
 git branch -a
 ```
 
+Para actualizar una rama con los últimos cambios del repositorio:
+
+```bash
+git fetch origin
+git reset --hard origin/Clase_1
+```
+
+Reemplaza `Clase_1` por la rama que quieras. Este comando funciona aunque hayas hecho commits accidentalmente en la rama.
+
+---
+
+## Si `git pull` da error
+
+Si hiciste cambios o commits en una rama de clase (o en `main`) y ahora `git pull` falla con un mensaje como:
+
+```
+Your branch and 'origin/Clase_1' have diverged
+```
+
+Ejecuta estos dos comandos para dejar la rama exactamente como está en el repositorio:
+
+```bash
+git fetch origin
+git reset --hard origin/Clase_1
+```
+
+Reemplaza `Clase_1` por la rama que tengas el problema (`Clase_2`, `main`, etc.). **Esto borra todos tus commits locales** en esa rama. Si querías conservar el código, cópialo antes a la rama `alumnos`.
+
 ---
 
 ## Rama de prácticas (`alumnos`)
