@@ -1,5 +1,17 @@
 # Clase 3 - Funciones
 
+## Antes de empezar: actualiza esta rama
+
+> **Haz esto cada vez que abras el repositorio antes de mirar el código.**
+
+```bash
+git fetch origin
+git reset --hard origin/Clase_3
+```
+
+Si hiciste algún commit accidental en esta rama, `git pull` fallará con un error de ramas divergentes. Este comando siempre funciona: descarga los últimos cambios y deja la rama en el estado correcto, pase lo que pase.
+
+---
 ## ¿En qué rama estás?
 
 Estás en la rama `Clase_3`, que introduce las funciones en Python: cómo definirlas, los distintos tipos de parámetros, el ámbito de variables (LEGB), lambdas y funciones de orden superior.
