@@ -1,5 +1,17 @@
 # Clase 7 - Biblioteca estándar de Python
 
+## Antes de empezar: actualiza esta rama
+
+> **Haz esto cada vez que abras el repositorio antes de mirar el código.**
+
+```bash
+git fetch origin
+git reset --hard origin/Clase_7
+```
+
+Si hiciste algún commit accidental en esta rama, `git pull` fallará con un error de ramas divergentes. Este comando siempre funciona: descarga los últimos cambios y deja la rama en el estado correcto, pase lo que pase.
+
+---
 ## ¿En qué rama estás?
 
 Estás en la rama `Clase_7`, que hace un recorrido por 10 módulos sencillos y muy útiles de la biblioteca estándar de Python, todos disponibles sin instalar nada.
