@@ -1,5 +1,17 @@
 # Clase 5 - Módulos, paquetes y entornos virtuales
 
+## Antes de empezar: actualiza esta rama
+
+> **Haz esto cada vez que abras el repositorio antes de mirar el código.**
+
+```bash
+git fetch origin
+git reset --hard origin/Clase_5
+```
+
+Si hiciste algún commit accidental en esta rama, `git pull` fallará con un error de ramas divergentes. Este comando siempre funciona: descarga los últimos cambios y deja la rama en el estado correcto, pase lo que pase.
+
+---
 ## ¿En qué rama estás?
 
 Estás en la rama `Clase_5`, que cubre cómo organizar el código Python en módulos y paquetes, gestionar dependencias con `pip` y crear entornos virtuales con `venv`.
