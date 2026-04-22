@@ -1,5 +1,17 @@
 # Clase 6 - Archivos y context managers
 
+## Antes de empezar: actualiza esta rama
+
+> **Haz esto cada vez que abras el repositorio antes de mirar el código.**
+
+```bash
+git fetch origin
+git reset --hard origin/Clase_6
+```
+
+Si hiciste algún commit accidental en esta rama, `git pull` fallará con un error de ramas divergentes. Este comando siempre funciona: descarga los últimos cambios y deja la rama en el estado correcto, pase lo que pase.
+
+---
 ## ¿En qué rama estás?
 
 Estás en la rama `Clase_6`, que cubre el trabajo con archivos en Python: lectura, escritura, context managers y algunos módulos útiles de la biblioteca estándar relacionados con el sistema de archivos.
